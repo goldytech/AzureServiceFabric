@@ -1,0 +1,15 @@
+﻿@model IDictionary<Guid, long>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<table class="table-condensed">
+    @foreach (var entry in Model)
+    {
+        <tr>
+            <td>@entry.Key.ToString()</td>
+            <td>@entry.Value</td>
+        </tr>
+
+    }
+</table>
